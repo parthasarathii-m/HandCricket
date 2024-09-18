@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script/script.js"></script>
+    <title>Hand Cricket</title>
+</head>
+
+<body>
+    <h1 id="welcome">Welcome Home...!</h1>
+    <p id="welcome-text">Wanna remember school days? <a id="redirect" href="#play-area">Click here</a></p>
+
+    <div id="play-area">
+        <div id="button">
+            <button onclick="showGame()">
+                <h1>Start</h1>
+            </button>
+        </div>
+        <div id="game">
+            <div id="game-info">
+                <span id="player-score">Runs : 0</span>
+                <span id="target">Target : 0</span>
+            </div>
+            <div id="player">
+                <h1>Player</h1>
+                <div id="run">
+                    <button onclick="addRuns(1)">1</button>
+                    <button onclick="addRuns(2)">2</button>
+                    <button onclick="addRuns(3)">3</button>
+                    <button onclick="addRuns(4)">4</button>
+                    <button onclick="addRuns(5)">5</button>
+                    <button onclick="addRuns(6)">6</button>
+                </div>
+            </div>
+            <div id="computer">
+                <h1>Computer</h1>
+                <div id="computer-choise">
+                    0
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
