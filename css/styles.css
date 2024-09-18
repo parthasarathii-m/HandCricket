@@ -18,6 +18,7 @@ body{
     margin-top: 60%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10%;
     border: 1px solid black;
     padding: 1em;
     border-style: dotted;
@@ -49,15 +50,22 @@ body{
     display: flex;
     justify-content: space-between;
 }
-#run span{
+#run button{
     border-radius: 10% ;
     padding: 20px 25px;
     border: 1px solid black ;
+    background-color: white;
+}
+#run button:hover{
+    cursor: pointer;
 }
 #computer-choise{
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
     background-color: black;
     width: 50%;
     margin: 1px auto;
-    padding: 40px;
+    padding: 5% 0% 5% 40%;
     border-radius: 10px;
 }
