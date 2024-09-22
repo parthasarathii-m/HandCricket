@@ -13,12 +13,16 @@ function getComputerChoise() {
 }
 
 function addRuns(run) {
+    document.getElementById("computer-out").style.display="none";
+    document.getElementById("you-out").style.display="none";
+    document.getElementById("computer-won").style.display="none";
+    document.getElementById("you-won").style.display="none";
     let computerChoise = 0;
     computerChoise = getComputerChoise();
     document.getElementById("computer-choise").innerHTML = computerChoise;
     if (computerChoise == run) {
         if (batter == "player") {
-            console.log("you are out")
+            document.getElementById("you-out").style.display="block";
             innings = 2;
             batter = "computer";
             target = runs;
@@ -27,7 +31,8 @@ function addRuns(run) {
             document.getElementById("player-score").innerHTML = "Runs : 0";
         }
         else {
-            console.log("computer is out");
+            document.getElementById("computer-out").style.display="block";
+            document.getElementById("you-won").style.display="block";
             reset();
         }
     }
@@ -41,7 +46,7 @@ function addRuns(run) {
         document.getElementById("player-score").innerHTML = "Runs : " + runs;
     }
     if (runs >= target && innings == 2) {
-        console.log("Computer won")
+        document.getElementById("computer-won").style.display="block";
         reset();
     }
 }
