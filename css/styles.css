@@ -1,6 +1,6 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image:linear-gradient(to left,violet,rgb(152, 158, 169));
+    background:url("../images/wallpaper\ animation.jpeg");
     background-attachment: fixed;
     color: white;
 }
@@ -67,6 +67,7 @@ body {
     width: 60%;
     margin: 10px auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -91,3 +92,30 @@ body {
     padding: 5% 0% 5% 40%;
     border-radius: 10px;
 }
+
+#you-out,#computer-out{
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+#you-won,#computer-won{
+    color: rgb(0, 55, 255);
+    text-align: center;
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #play-area{
+        min-width: 70%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #welcome{
+        font-size: 3em;
+    }
+    body{
+        background: url("../images/download.jpeg");
+    }
+  }
