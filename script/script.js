@@ -11,7 +11,9 @@ function getComputerChoise() {
     let x = Math.floor((Math.random() * 6) + 1);
     return x;
 }
-
+function showPlayArea(){
+    document.getElementById("play-area").style.display="block";
+}
 function addRuns(run) {
     document.getElementById("computer-out").style.display="none";
     document.getElementById("you-out").style.display="none";
