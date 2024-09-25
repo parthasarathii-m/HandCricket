@@ -2,39 +2,45 @@ let runs = 0;
 let target = 0;
 let batter = "player";
 let innings = 1;
+
 function showGame() {
     document.getElementById("game").style.display = "block";
     document.getElementById("button").style.display = "none";
+    document.getElementById("batter").innerHTML = "Batter : Player"
+    document.getElementById("bowler").innerHTML = "Bowler : Computer"
 }
 
 function getComputerChoise() {
     let x = Math.floor((Math.random() * 6) + 1);
     return x;
 }
-function showPlayArea(){
-    document.getElementById("play-area").style.display="block";
+function showPlayArea() {
+    document.getElementById("play-area").style.display = "block";
 }
 function addRuns(run) {
-    document.getElementById("computer-out").style.display="none";
-    document.getElementById("you-out").style.display="none";
-    document.getElementById("computer-won").style.display="none";
-    document.getElementById("you-won").style.display="none";
+    document.getElementById("computer-out").style.display = "none";
+    document.getElementById("you-out").style.display = "none";
+    document.getElementById("computer-won").style.display = "none";
+    document.getElementById("you-won").style.display = "none";
     let computerChoise = 0;
     computerChoise = getComputerChoise();
     document.getElementById("computer-choise").innerHTML = computerChoise;
     if (computerChoise == run) {
         if (batter == "player") {
-            document.getElementById("you-out").style.display="block";
+            document.getElementById("you-out").style.display = "block";
+
             innings = 2;
             batter = "computer";
             target = runs;
             runs = 0;
             document.getElementById("target").innerHTML = "Target : " + target;
             document.getElementById("player-score").innerHTML = "Runs : 0";
+            document.getElementById("batter").innerHTML = "Batter : Computer"
+            document.getElementById("bowler").innerHTML = "Bowler : Player"
         }
         else {
-            document.getElementById("computer-out").style.display="block";
-            document.getElementById("you-won").style.display="block";
+            document.getElementById("computer-out").style.display = "block";
+            document.getElementById("you-won").style.display = "block";
             reset();
         }
     }
@@ -48,7 +54,7 @@ function addRuns(run) {
         document.getElementById("player-score").innerHTML = "Runs : " + runs;
     }
     if (runs >= target && innings == 2) {
-        document.getElementById("computer-won").style.display="block";
+        document.getElementById("computer-won").style.display = "block";
         reset();
     }
 }
